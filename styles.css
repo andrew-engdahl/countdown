@@ -1,0 +1,108 @@
+body {
+	position: fixed;
+	margin: 0;
+	color: rgba(40,40,40,1);
+	background-color: #fff;
+	overflow: hidden;
+	font-size: 15vmin;
+	font-family: 'Bangers', sans-serif;
+	width: 100%;
+	height: 100%;
+}
+
+header {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 92%;
+	font-size: .3em;
+	font-weight: bold;
+	letter-spacing: 0.05em;
+	z-index: 1;
+	text-transform: capitalize;
+}
+
+#container {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	font-family: 'Bangers', sans-serif;
+}
+
+div {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+
+#time {
+	font-size: .8em;
+}
+
+#circle0 {
+	width: 2.25em;
+	height: 2.25em;
+	border-right: .05em solid rgba(80,80,80,1);
+	border-bottom: .05em solid transparent;
+	border-left: .05em solid transparent;
+	border-top: .05em solid rgba(80,80,80,1);
+	border-radius: 50%;
+	animation: rotate 4.5s linear 0s infinite reverse;
+}
+
+#circle1 {
+	width: 2.5em;
+	height: 2.5em;
+	border-right: .6em solid transparent;
+	border-bottom: .6em solid rgba(0,255,255,1);
+	border-left: .6em solid transparent;
+	border-top: .6em solid transparent;
+	border-radius: 50%;
+	animation: rotate 3.8s linear 0s infinite;
+}
+
+#circle2 {
+	width: 3.8em;
+	height: 3.8em;
+	border-right: .075em solid transparent;
+	border-bottom: .075em solid rgba(255,255,0,1);
+	border-left: .075em solid rgba(255,255,0,1);
+	border-top: .075em solid transparent;
+	border-radius: 50%;
+	animation: rotate 1.8s linear 0s infinite;
+}
+
+#circle3 {
+	width: 4.1em;
+	height: 4.1em;
+	border-right: .6em solid transparent;
+	border-bottom: .6em solid transparent;
+	border-left: .6em solid transparent;
+	border-top: .6em solid rgba(255,0,255,1);
+	border-radius: 50%;
+	animation: rotate 3.2s linear 0s infinite reverse;
+}
+
+@keyframes rotate {
+	from {transform: translate(-50%,-50%) rotate(0deg);}
+	to {transform: translate(-50%,-50%) rotate(360deg);}
+}
+
+footer {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 1.75em;
+	z-index: -1;
+	transform: translate(-90%,-50%) rotate(0deg);
+	color: rgba(240, 240, 240, 1);
+	letter-spacing: 0.1em;
+	animation: oss 60s cubic-bezier(0.15, 0, 0.85, 1) 0s infinite alternate;
+}
+
+@keyframes oss {
+	from {transform: translate(-90%,-50%) rotate(0deg);}
+	to {transform: translate(-10%,-50%) rotate(0deg);}
+}
